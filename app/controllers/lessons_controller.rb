@@ -11,7 +11,7 @@ class LessonsController < ApplicationController
       redirect_to course_path(current_lesson.section.course), :alert => "You must be enrolled to view the lesson"
     end
   end
-  
+ 
   private
 
   helper_method :current_lesson
