@@ -2,6 +2,7 @@ class Instructor::LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_authorized_for_current_section, only: [:new, :create]
   before_action :require_authorized_for_current_lesson, only: [:update]
+  
   def new
     @lesson = Lesson.new
   end
@@ -21,7 +22,7 @@ class Instructor::LessonsController < ApplicationController
 
   def require_authorized_for_current_lesson
     if current_lesson.secton.course.user != current_user
-      render plain: 'Unauthorized', status: :authorized
+      render plain: 'Unauthorized', status: :unauthorized
     end
   end
 
@@ -42,7 +43,7 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle, :video, :row_order_postition)
+    params.require(:lesson).permit(:title, :subtitle, :video, :row_order_position)
   end
   
 end
