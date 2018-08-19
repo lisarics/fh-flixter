@@ -74,23 +74,18 @@
         <h4 class="modal-title" id="newSectionModalLabel">Add a new section</h4>
       </div>
       <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
-      <div class="modal-body">
-         <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
-  <%= f.input :title %>
-  <br />
-  <%= f.submit "Add a section", class: 'btn btn-primary' %>
-  <br />
-  <br />
-  <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Add a section", class: 'btn btn-primary' %>
-      </div>
+        <div class="modal-body">
+          <%= f.input :title %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a section", class: 'btn btn-primary' %>
+        </div>
       <% end %>
     </div>
   </div>
+</div>
 </div> 
+
+
  
-
-
