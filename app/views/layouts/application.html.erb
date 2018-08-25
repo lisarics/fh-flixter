@@ -14,7 +14,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Flixter</a>
+      <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item">
@@ -78,11 +78,18 @@
         <b>Social</b>
         <br />
         <br />
-           <%= link_to 'http://github.com/lisarics' do %>
+          <%= link_to 'http://github.com/lisarics' do %>
           <span class="fa fa-github-square fa-2x social-button"></span>
          <% end %>
-          <span class="fa fa-facebook-square fa-2x social-button"></span>
+         <%= link_to 'https://www.linkedin.com/in/lisarics/' do %>
+          <span class="fa fa-linkedin-square fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://twitter.com/lisarichardson' do %>
           <span class="fa fa-twitter-square fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://plus.google.com/u/0/+LisaRichardson000' do %>
+          <span class="fa fa-google-plus-square fa-2x social-button"></span>
+          <% end %>
       </div>
     </div>
     </div>

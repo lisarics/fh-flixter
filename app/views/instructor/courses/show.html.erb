@@ -32,7 +32,7 @@
   </div>
   <ul class = "sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
-      <li data-update-url=<%= instructor_section_path section%>" class="section-li">
+      <li data-update-url="<%= instructor_section_path section%>" class="section-li">
         <div class="header float-left">
         <span class="fa fa-ellipsis-v"></span>
         <%= section.title %>
@@ -50,15 +50,15 @@
               <div class="row">
                 <div class="col-1">
                   <br />
-              <span class="fa fa-ellipsis-v"></span>
-            </div>
-            <div class="coll-11 text-center">
+                    <span class="fa fa-ellipsis-v"></span>
+              </div>
+                <div class="coll-11 text-center">
               <p>
               <b><%= lesson.title %></b>
               </p>
               <p>
               <%= lesson.subtitle %>
-            </p>
+              </p>
           </div>
         </div>
         <br class = "clr" /> 
@@ -66,10 +66,10 @@
           <% end %>
         </ul>
         <br class="clr" />
-      </li>
-    <% end %>
-  </ul>
-</div>
+           </li>
+              <% end %>
+        </ul>
+        </div>
 
 <!-- Modal -->
 <div class="modal fade" id="newSectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -95,8 +95,6 @@
 </div>
 </div> 
 
-
-
 <!-- Modal -->
 <div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -107,24 +105,15 @@
         </button>
         <h4 class="modal-title" id="newLessonModelLabel">Add a new lesson</h4>
       </div>
-      
        <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
        <div class="modal-body">
           <%= f.input :title %>
           <%= f.input :subtitle %>
           <%= f.input :video %>
-
         </div>
         <div class="modal-footer">
              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          
-          <%= f.submit "Add the lesson", class: 'btn btn-primary' %>
-          
-
-    
-     
-     
-      
+          <%= f.submit "Add the lesson", class: 'btn btn-primary' %> 
        </div>
       <% end %>
     </div>

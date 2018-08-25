@@ -10,7 +10,8 @@
 
 .navbar-inverse a.navbar-brand{
   font-family: "Helvetica Neue", Hervetica;
-  font-weight: 100;
+  font-weight: 200;
+  font-size: 35px;
   color: yellow;
 }
 
@@ -46,7 +47,8 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .btn {
-  border-radius: 0;
+  border-radius: 2;
+
 }
 
 .feature {
@@ -103,7 +105,7 @@ body{
   font-size: 25px;
 }
 
-.lesson li {
+.lessons li {
   background: black;
   color: white;
   margin: 10px;
@@ -113,12 +115,12 @@ body{
   font-size: 15px;
 }
 
-.lesson li b {
+.lessons li b {
   font-size: 25px;
   font-weight: 100;
 }
 
-.lesson li p {
+.lessons li p {
   margin: 0;
 }
 
@@ -146,4 +148,12 @@ ul .header{
 
 ul .header .fa {
   font-size: 20px;
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #ffeeee;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+  margin: 10px;
 }
